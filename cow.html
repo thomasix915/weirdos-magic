@@ -24,10 +24,11 @@
 		</style>
 	</head>
 	<body>
-		<p style="text-align: center;border-bottom:#333 solid 1px;padding-bottom:35px;">
+		<p style="text-align: center; padding-bottom:35px;">
 			<span style="font-size:60px;color:#fff;">COW</span>
 		</p>
 		<div id="cow_content" style="text-align:center;border:#333 solid 1px; padding:25px;margin:25px;" contenteditable spellcheck="false"></div>
+		<div style="font-size:20px;color:#555;text-align:right;margin-right:25px;">...it's editable: click, type, take area screenshot => personalized cartoon</div>
 		<script>
 		if(location.search.indexOf('?title=')!=-1){
 			items=location.search.split('&');
@@ -37,7 +38,7 @@
 				document.getElementById('cow_content').innerHTML+='<p><img src="'+decodeURIComponent(items[x].substr(items[x].indexOf('=')+1))+'" style="max-width:100%;" /></p>';
 				document.getElementById('cow_content').innerHTML+='<p>'+decodeURIComponent(items[x+1].substr(items[x+1].indexOf('=')+1))+'</p>';
 			}
-			document.getElementById('cow_content').innerHTML+='<p>&nbsp;</p><hr /><p style="font-size:20px;color:#555;text-align:right;padding:15px;">...it\'s editable: click, type, take area screenshot => personalized cartoon</p><p>&nbsp;</p>';
+			document.getElementById('cow_content').innerHTML+='';
 		}
 		</script>
 	</body>
