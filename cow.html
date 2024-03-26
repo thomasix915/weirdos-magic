@@ -9,6 +9,7 @@
 			background-color:#000;
 			color:#f9f9f9;
 			font-family:caveat,Comic Sans MS,cursive;
+			font-size:24px;
 		}
 		a{
 			color:#f9f9f9;
@@ -23,15 +24,12 @@
 		</style>
 	</head>
 	<body>
-		<div style="background-color:rgba(0, 0, 0);color:#fff;font-family:caveat,Comic Sans MS,cursive;font-size:24px;">
-			<p style="text-align: center;">
-				<span style="font-size:96px;color:#fff;">COW</span>
-			</p>
-			<hr />
+		<p style="text-align: center;">
+			<span style="font-size:96px;color:#fff;">COW</span>
+		</p>
+		<hr />
 		<div id="cow_content" style="text-align:center;" contenteditable spellcheck="false"></div>
-		</div>
 		<script>
-		document.body.style="backgroundColor:#000;";
 		if(location.search.indexOf('?title=')!=-1){
 			items=location.search.split('&');
 			document.getElementById('cow_content').innerHTML+='<p style="font-size:48px;">'+decodeURIComponent(items[0].substr(items[0].indexOf('=')+1))+'</p>';
