@@ -1210,7 +1210,7 @@
 			var content='';
 			for(var x=toon_count;x>0;x--){
 				if((toons['t'+x]['tags'].toLowerCase().indexOf(term)!=-1) || (decodeURIComponent(toons['t'+x]['url']).toLowerCase().indexOf(term)!=-1)){
-				content+='<div><a href="'+toons['t'+x]['url']+'" target="_blank"><img src="toons/cow'+x+'_t.jpg" title="COW #'+x+'" /></a></div>';
+				content+='<div style="width:100px;display:inline-block;margin:auto;"><a href="'+toons['t'+x]['url']+'" target="_blank"><img src="toons/cow'+x+'_t.jpg" title="COW #'+x+'" /></a></div>';
 				}
 			}
 			document.getElementById('archive').innerHTML=content;
@@ -1246,7 +1246,7 @@
 		</style>
 	</head>
 	<body onload="assemblePage();">
-		<div style="text-align:center;">
+		<div style="text-align:center;margin:bottom:15px;">
 			<input type="text" value="" placeholder="-search-" style="" onkeyup="if(this.value.length){searchTerm(this.value.toLowerCase());}else{assemblePage();}" />
 		</div>
 		<div id="archive" style="max-width:800px; margin:auto;"></div>
