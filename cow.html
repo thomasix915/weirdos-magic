@@ -36,7 +36,7 @@
 			if(decodeURIComponent(items[1].substr(items[1].indexOf('=')+1).length)){document.getElementById('cow_content').innerHTML+='<p style="font-size:32px;">'+decodeURIComponent(items[1].substr(items[1].indexOf('=')+1))+'</p>';}
 			for(x=2;x<items.length;x+=2){
 				document.getElementById('cow_content').innerHTML+='<p><img src="'+decodeURIComponent(items[x].substr(items[x].indexOf('=')+1))+'" style="max-width:100%;" /></p>';
-				document.getElementById('cow_content').innerHTML+='<p>'+decodeURIComponent(items[x+1].substr(items[x+1].indexOf('=')+1))+'</p>';
+				document.getElementById('cow_content').innerHTML+='<p>'+decodeURIComponent(items[x+1].substr(items[x+1].indexOf('=')+1))+'</p>&nbsp;</p>';
 			}
 			document.getElementById('cow_content').innerHTML+='';
 		}
