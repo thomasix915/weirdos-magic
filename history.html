@@ -1201,7 +1201,7 @@
 			var toon_count=Object.keys(toons).length;
 			var content='';
 			for(var x=toon_count;x>0;x--){
-				content+='<div style="width:100px;display:inline-block;margin:auto;"><a href="'+toons['t'+x]['url']+'"><img src="toons/cow'+x+'_t.jpg" title="COW #'+x+'" /></a></div>';
+				content+='<div style="width:100px;display:inline-block;margin:auto;"><a href="'+toons['t'+x]['url']+'" target="_blank"><img src="toons/cow'+x+'_t.jpg" title="COW #'+x+'" /></a></div>';
 			}
 			document.getElementById('archive').innerHTML=content;
 		}
