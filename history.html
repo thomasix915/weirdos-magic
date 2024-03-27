@@ -1208,9 +1208,8 @@
 		function searchTerm(term){
 			var toon_count=Object.keys(toons).length;
 			var content='';
-			toons_search=decodeURIComponent(toons['t'+x]['url']).toLowerCase().replace('https://thomasix915.github.io/weirdos-magic/cow.html?title=','').replace('&subtitle=','').replace('&img=toons','').replace('&quote=','');
 			for(var x=toon_count;x>0;x--){
-				if((toons['t'+x]['tags'].toLowerCase().indexOf(term)!=-1) || (toons_search.indexOf(term)!=-1)){
+				if((toons['t'+x]['tags'].toLowerCase().indexOf(term)!=-1) || (decodeURIComponent(toons['t'+x]['url']).toLowerCase().replace('https://thomasix915.github.io/weirdos-magic/cow.html?title=','').replace('&subtitle=','').replace('&img=toons','').replace('&quote=','').indexOf(term)!=-1)){
 				content+='<div style="width:100px;display:inline-block;margin:auto;"><a href="'+toons['t'+x]['url']+'" target="_blank"><img src="toons/cow'+x+'_t.jpg" title="COW #'+x+'" /></a></div>';
 				}
 			}
